@@ -2,38 +2,42 @@ import React, { useState } from "react";
 import "./SideNavBar.css";
 
 const SideNavBar = () => {
-	const [isExpanded, setExpendState] = useState(false);
+	const [isExpanded, setExpendState] = useState(true);
 	const menuItems = [
 		{
-			text: "Dashboard",
+			text: "Inicio",
 			icon: "icons/grid.svg",
 		},
 		{
-			text: "Admin Profile",
+			text: "Compras",
 			icon: "icons/user.svg",
 		},
 		{
-			text: "Messages",
+			text: "Ventas",
 			icon: "icons/message.svg",
 		},
 		{
-			text: "Analytics",
+			text: "Clientes",
 			icon: "icons/pie-chart.svg",
 		},
 		{
-			text: "File Manager",
+			text: "Proveedores",
 			icon: "icons/folder.svg",
 		},
 		{
-			text: "Orders",
+			text: "Inventario",
 			icon: "icons/shopping-cart.svg",
 		},
 		{
-			text: "Saved Items",
+			text: "Usuarios",
 			icon: "icons/heart.svg",
 		},
 		{
-			text: "Settings",
+			text: "Mantenimiento",
+			icon: "icons/settings.svg",
+		},
+		{
+			text: "Ayuda",
 			icon: "icons/settings.svg",
 		},
 	];
@@ -49,8 +53,8 @@ const SideNavBar = () => {
 				<div className="nav-heading">
 					{isExpanded && (
 						<div className="nav-brand">
-							<img src="icons/Logo.svg" alt="" srcset="" />
-							<h2>Showkart</h2>
+							<img src="icons/Logo.svg" alt="Logo" srcset="" />
+							<h2>SysProp Gelato</h2>
 						</div>
 					)}
 					<button
@@ -70,7 +74,7 @@ const SideNavBar = () => {
 							className={isExpanded ? "menu-item" : "menu-item menu-item-NX"}
 							href="#"
 						>
-							<img className="menu-item-icon" src={icon} alt="" srcset="" />
+							<img className="menu-item-icon" src={icon} alt={text} srcset="" />
 							{isExpanded && <p>{text}</p>}
 						</a>
 					))}
@@ -82,12 +86,12 @@ const SideNavBar = () => {
 						<img
 							className="nav-footer-avatar"
 							src="icons/admin-avatar.svg"
-							alt=""
+							alt="Usuario"
 							srcset=""
 						/>
 						<div className="nav-footer-info">
-							<p className="nav-footer-user-name">M Showkat</p>
-							<p className="nav-footer-user-position">store admin</p>
+							<p className="nav-footer-user-name">Julio Pacheco</p>
+							<p className="nav-footer-user-position">Administrador</p>
 						</div>
 					</div>
 				)}
